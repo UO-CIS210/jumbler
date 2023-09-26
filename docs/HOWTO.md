@@ -79,7 +79,13 @@ Tribune Content Agency and used here
 under fair use provisions of U.S.
 Copyright Law for educational purposes:
 
-![Daily Jumble (example). (c) 2022 Tribune Content Agency](img/jumble.png)
+![An example puzzle with jumbled words "kawea", "chirb", "pintac"
+"nsyawk".](
+img/jumble.png "Daily Jumble (example). (c) 2022 Tribune Content Agency")
+
+[Caption: "Unscramble these Jumbles, one letter to each square, to 
+form ordinary words."  The jumbled words are "KAWEA", "CHIRB", 
+"PINTAC", and "NSYAWK".]
 
 You will construct a program to solve one of the anagrams in a Jumble.
 For example, the first anagram in the puzzle illustrated
@@ -132,7 +138,12 @@ sorted("AWAKE")
 If you execute those two lines in IDLE, you should see something
 like this:
 
-![Sorted strings in Python](img/sorted-strings.png)
+```commandline
+>>> sorted("KAWEA")
+    ['A', 'A', 'E', 'K', 'W']
+>>> sorted("AWAKE")
+    ['A', 'A', 'E', 'K', 'W']
+```
 
 It looks a little strange ... maybe we expected the output of
 `sorted("KAWEA")` to be `"AAEKW"`, but instead of a string of
@@ -141,13 +152,17 @@ But the important thing is that when we sorted `"AWAKE"` we got
 the same list `['A', 'A', 'E', 'K', 'W']`. Good enough!  We can
 compare these lists and determine whether they are equal:
 
-```python
+```commandline
 sorted("KAWEA") == sorted("AWAKE")
 ```
 
-Try it in IDLE. You should see this:
+Try it in IDLE (or the console of your favorite IDE). You should see 
+this:
 
-![Checking equality of sorted strings](img/sorted-compare.png)
+```commandline
+>>> sorted("KAWEA") == sorted("AWAKE")
+    True
+```
 
 So now we have a good strategy:
 
@@ -352,6 +367,9 @@ The value of having a short word list should be apparent now. We can
 look at the output and compare it to the content of `shortdict.txt`.
 
 ![Our first attempt at scanning and printing the word list](img/scan-file-1.png)
+
+[Description: Output shows "alpha", "beta", etc., separated by blank
+lines.]
 
 Something isn't right. We are reading and printing each line, but we
 seem to be getting a blank line between each line of text
