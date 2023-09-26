@@ -344,7 +344,7 @@ each line.
 
 ```python
 dict_file = open(DICT, "r")
-for line in DICT_FILE:
+for line in dict_file:
     print(line)
 ```
 
